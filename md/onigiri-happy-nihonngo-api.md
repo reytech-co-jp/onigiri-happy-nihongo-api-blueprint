@@ -20,39 +20,39 @@ FORMAT: 1A
 
 + Response 201 (application/json)
   + Body
-    {
-      "kanji": "認証",
-      "answer": "authentication"
-      "selectArray":[
-        "authentication",
-        "zero-day",
-        "authorization",
-        "WAP"
-      ],
-      "audio": "authentication.mp3"
-    }
+        {
+          "kanji": "認証",
+          "answer": "authentication"
+          "selectArray":[
+            "authentication",
+            "zero-day",
+            "authorization",
+            "WAP"
+          ],
+          "audio": "authentication.mp3"
+        }
 
 + Response 400
   + Body
-    {
-      "message":"validation error",
-      "errors":[
         {
-          "field":"eng_name",
-          "messages":[
-            "cannot be empty",
-            "maximum length is 50"
-          ]
-        },
-        {
-          "field":"testId",
-          "messages":[
-            "cannot be null",
-            "maximum length is 11",
+          "message":"validation error",
+          "errors":[
+            {
+              "field":"eng_name",
+              "messages":[
+                "cannot be empty",
+                "maximum length is 50"
+              ]
+            },
+            {
+              "field":"testId",
+              "messages":[
+                "cannot be null",
+                "maximum length is 11",
+              ]
+            }
           ]
         }
-      ]
-    }
 
 # Group Common
 
