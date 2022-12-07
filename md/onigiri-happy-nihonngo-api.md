@@ -9,12 +9,12 @@ FORMAT: 1A
 テストデータを取得します。
 以下のパラメータをJSON形式で送信します。
 
-+ eng_name (string, required) - ジャンル名。50文字以内
++ genre (string, required) - ジャンル名。50文字以内
 + testId (int, required) - テストID。11文字以内
 
 + Request (application/json)
   {
-    "eng_name": "IT",
+    "genre": "IT",
     "testId": "2"
   }
 
