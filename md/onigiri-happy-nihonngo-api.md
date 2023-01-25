@@ -10,7 +10,7 @@ FORMAT: 1A
 以下のパラメータをJSON形式で送信します。
 
 + genre (string, required) - ジャンル名。50文字以内
-+ testId (int, required) - テストID。11文字以内
++ testId (int, required) - テストID。999以下
 
 + Request (application/json)
   {
@@ -48,7 +48,7 @@ FORMAT: 1A
               "field":"testId",
               "messages":[
                 "cannot be null",
-                "maximum length is 11",
+                "maximum value is 999",
               ]
             }
           ]
