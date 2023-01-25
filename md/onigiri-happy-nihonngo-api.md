@@ -4,7 +4,7 @@ FORMAT: 1A
 
 # Group Onigiri
 
-## POST /onigiriGetTest
+## POST /onigiri-tests
 
 テストデータを取得します。
 以下のパラメータをJSON形式で送信します。
