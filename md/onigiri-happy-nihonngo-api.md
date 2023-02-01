@@ -4,32 +4,40 @@ FORMAT: 1A
 
 # Group Onigiri
 
-## POST /onigiri-tests
+## GET /onigiri-tests{?genre,testId}
 
-テストデータを取得します。
-以下のパラメータをJSON形式で送信します。
+テストデータ（1テスト：10単語分）を取得します。
+Responseは2単語分に省略して表示
 
-+ genre (string, required) - ジャンル名。50文字以内
-+ testId (int, required) - テストID。999以下
++ Parameters
+  + genre: IT (string, required) - ジャンル名。50文字以内
+  + testId: 1 (int, required) - テストID。999以下
 
-+ Request (application/json)
-  {
-    "genre": "IT",
-    "testId": "2"
-  }
-
-+ Response 201 (application/json)
++ Response 200 (application/json)
   + Body
         {
-          "kanji": "認証",
-          "answer": "authentication"
-          "selectArray":[
-            "authentication",
-            "zero-day",
-            "authorization",
-            "WAP"
-          ],
-          "audio": "authentication.mp3"
+            {
+               "kanji": "認証",
+               "answer": "authentication"
+               "selectArray":[
+                 "authentication",
+                 "zero-day",
+                 "authorization",
+                 "WAP"
+               ],
+               "audio": "authentication.mp3"
+            },
+            {
+               "kanji": "入力",
+               "answer": "input",
+               "selectArray":[
+                 "input",
+                 "output",
+                 "push",
+                 "pull"
+               ],
+               "audio": "input.mp3"
+            }
         }
 
 + Response 400
